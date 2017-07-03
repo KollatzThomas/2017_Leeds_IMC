@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>epidat – Database of Jewish Epigraphy</title>
+
+        <!-- meta information -->
+        <meta name="author" content="Thomas Kollatz" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <!-- favicons -->
+        <link rel="shortcut icon" href="resources/img/favicon.png" />
+        <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+        <!-- CSS reset and grid -->
+        <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+        <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+        <!-- fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext"
+            rel="stylesheet" type="text/css" />
+
+        <!-- styles for included libraries -->
+
+        <!-- chartist -->
+        <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+        <!-- codemirror -->
+        <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+
+        <!-- highlight -->
+        <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+        <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+        <!-- standard presentation styles -->
+        <link href="resources/css/style.css" rel="stylesheet" />
+
+        <!-- custom presentation styles -->
+        <link href="resources/css/custom.css" rel="stylesheet" />
+
+        <!-- js needed in head -->
+
+        <!-- greuler -->
+        <script src="vendor/d3/d3-3.5.6.js"></script>
+        <script src="vendor/cola/cola.v3.min.js"></script>
+        <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+        <!-- html5 dataset shim for IE -->
+        <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div class="fallback-message">
+            <p> Your browser <strong>doesn't support the features required</strong> by
+                impress.mod.js, so you are presented with a simplified version of this presentation. </p>
+            <p> For the best experience please use the latest <strong>Chrome</strong>,
+                    <strong>Safari</strong> or <strong>Firefox</strong> browser. </p>
+        </div>
+        <div id="impress">
+            <div class="step">
+                <h4><strong>2017-07-05</strong> | <a
+                        href="https://imc.leeds.ac.uk/dbsql02/AQueryServlet?*id=30&amp;*formId=30&amp;*context=IMC&amp;chosenPaperId=NA&amp;sessionId=7094&amp;conference=2017&amp;chosenPaperId=&amp;*servletURI=https://imc.leeds.ac.uk/dbsql02/AQueryServlet"
+                        >IMC Leeds</a></h4>
+                <h4><strong>session 1104: Digital Approaches to Jewish History in Medieval Germany
+                    </strong></h4>
+                <h1 class="down-100">Epidat</h1>
+                <h2 class="red up-25">Database of Jewish Epigraphy</h2>
+                <h4 class="down-100">
+                    <strong>Data: 
+                    <strong>Slides:</strong>
+                    <a href="https://kollatzthomas/github.io/2017_Leeds"
+                        title="View the presentation online">
+                        https://kollatzthomas/github.io/2017_Leeds </a>
+                </h4>
+                <h5>
+                    <strong><a href="http://orcid.org/0000-0003-1904-1841">Thomas
+                        Kollatz</a></strong> | <img src="resources/img/Twitter_bird_logo_2012.svg"
+                        alt="Twitter" class="twitter-icon" />
+                    <a href="https://twitter.com/kol_t" title="Thomas Kollatz on Twitter">@kol_t</a>
+                    | <img src="resources/img/Octicons-mark-github.svg" alt="Twitter"
+                        class="gh-icon" />
+                    <a href="https://github.com/kollatzthomas/" title="Thomas Kollatz on GitHub"
+                        >KollatzThomas</a> | <a href="https://creativecommons.org/licenses/by/4.0/"
+                        >CC-BY 4.0</a>
+                    <br/>Mainz – Digitale Akademie | Essen – Steinheim-Institut 
+                </h5>
+            </div>
+            <!--
+            <div class="step">
+                <h2>Table of Contents</h2>
+                <ol class="line-height-one-five">
+                    <li> what </li>
+                    <li> how </li>
+                    <li> why </li>
+                </ol>
+            </div>
+            -->
+            <div class="step">
+                <div class="mfp-lightbox  row">
+                    <p>
+                        <img src="resources/img/epidat_whatisit.png" />
+                    </p>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="centered red">Access to the collections</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <div class="mfp-lightbox">
+                            <a href="resources/img/epidat_access_options.png"><img
+                                    src="resources/img/epidat_access_options.png" />
+                            </a>
+                        </div>
+                        <div>
+                            <p class="small"><a
+                                    href="http://steinheim-institut.de/cgi-bin/epidat?lang=en"
+                                    >http://steinheim-institut.de/cgi-bin/epidat</a></p>
+                        </div>
+                    </div><div class="six columns">
+                        <h3>Browse … </h3>
+                        <ol class="line-height-one-five">
+                            <li>chronological </li>
+                            <li>by region</li>
+                            <li>by maps</li>
+                            <li>by index</li>
+                            <li>through the digital images</li>
+                            <li>full-text-search</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h1 class="red">01</h1>
+                <h2 class="line-height-one-five"> what </h2>
+            </div>
+            <div class="step">
+                <h2>epigraphical database</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <p><a href=""><img /></a></p>
+                    </div>
+                    <div class="six columns"><dl>
+                            <dt>Scope</dt>
+                            <dd>180 digital editions of historic Jewish cemeteries</dd>
+                            <dd>33.000 Inscriptions 63.000 images</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2>epigraphical database</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <p><a href=""><img /></a></p>
+                    </div>
+                    <div class="six columns"><dl>
+
+                            <dt>Space</dt>
+                            <dd>Germany [165]</dd>
+                            <dd>Southern Netherlands [7]</dd>
+                            <dd>Lithuania [3]</dd>
+                            <dd>Czechia [5]</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2>epigraphical database</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <p><a href=""><img /></a></p>
+                    </div>
+                </div>
+                <div class="six columns"><dl>
+                        <dt>Time</dt>
+                        <dd>Time span ranges from the 11<sup>th</sup> to the 20<sup>th</sup>
+                            century</dd>
+
+                    </dl>
+                </div>
+            </div>
+            <div class="step">
+                <h2>epigraphical database</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <p><a href=""><img /></a></p>
+                    </div>
+                    <div class="six columns"><dl>
+                            <dt>Languages</dt>
+                            <dt>Hebrew</dt>
+                            <dt>German in Hebrew letters (1790<abbr>ff</abbr>)</dt>
+
+                            <dt>German (19<sup>th</sup> century)</dt>
+
+                        </dl></div>
+                </div></div>
+            <div class="step">
+                <h2 class="red">Examples</h2>
+            </div>
+            <div class="step">
+                <h2 class="red">Lilies of Worms</h2>
+                <h3>Visualization</h3>
+                <div class="row">
+                    <div class="mfp-lightbox eight columns">
+                        <a href="resources/img/lilies_Geo-Browser.png"><img
+                                src="resources/img/lilies_Geo-Browser.png" /></a>
+                    </div>
+                    <div class="four columns">
+                        <p class="line-height-one-five"> spatio-temporal data visualization with
+                            embedded <a href="">DARIAH-DE Geo-Browser</a></p>
+                        <ul>
+                            <li>place</li>
+                            <li>date</li>
+                            <li>symbol</li>
+                            <li>name</li>
+                        </ul><p><em>here</em> search for lilie</p>
+                    </div>
+                </div>
+                <div>
+                    <ul class="x-small down-25">
+                        <li>Michael Brocke: The lilies of Worms. In: Zutot 8 (2011), 3-13</li>
+                        <li><a
+                                href="http://steinheim-institut.de/cgi-bin/epidat?info=geobrowser&amp;lang=en"
+                                >http://steinheim-institut.de/cgi-bin/epidat?info=geobrowser&amp;lang=en</a></li>
+                    </ul></div>
+            </div>
+            <div class="step">
+                <div class="centered">
+                    <blockquote class="subspep down-50 ">Symbols, ornaments, decoration found on
+                        Jewish headstones as well as materials used are not limited to Jewish
+                        cultural life. How to make known <em>facts</em> to neighboured knowledged
+                        sectors? </blockquote>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red up-25 after-50">Shoes of Frankfort</h2>
+                <!-- <h3 class="red >Beispiele</h3> -->
+                <p>shoe – a Frankfort house emblem becoming a familyname</p>
+                <div class="mfp-lightbox row">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="resources/img/shoe_ffb-444.png" title="ffb-444"><img
+                                        src="resources/img/shoe_ffb-444.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-2057.png" title="ffb-2057"><img
+                                        src="resources/img/shoe_ffb-2057.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-55.png" title="ffb-55"><img
+                                        src="resources/img/shoe_ffb-55.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-1584.png" title="ffb-1584"><img
+                                        src="resources/img/shoe_ffb-1584.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-52.png" title="ffb-52"><img
+                                        src="resources/img/shoe_ffb-52.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-1678.png" title="ffb-1678"><img
+                                        src="resources/img/shoe_ffb-1678.png" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <table>
+                    <tr>
+                        <td>1607</td>
+                        <td>1612</td>
+
+                        <td>1774</td>
+                        <td>1782</td>
+
+                        <td>1795</td>
+                        <td>1805</td>
+                    </tr>
+                    <tr class="small">
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-444"
+                                >ffb-444</a></td>
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-2057"
+                                >ffb-2057</a></td>
+
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-55"
+                                >ffb-55</a></td>
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-1584"
+                                >ffb-1584</a></td>
+
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-52"
+                                >ffb-52</a></td>
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-1678"
+                                >ffb-1678</a></td>
+                    </tr>
+
+                    <tr class="x-small">
+                        <td>Schlomo Schuh Grotwol</td>
+                        <td>Breinlen bat Schlomo</td>
+
+                        <td>Joswel ben Schlomo Schuh</td>
+                        <td>Schönle bat David Rapp</td>
+
+                        <td>Breinche bat Süskind Leidersdorf</td>
+                        <td>Gitle bat Izek ben Jaakow Hanau SeGaL</td>
+                    </tr>
+                </table>
+                <blockquote class="substep down-50 centered">200 years of shoe-design engraved in
+                    headstones <ul class="substep">
+                        <li>how to disseminate accidental spinoff-results of this sort?</li>
+                    </ul></blockquote>
+            </div>
+            <div class="step">
+                <h2 class="red">(parts of) the solution</h2>
+                <h3>Thesaurus and Authority files</h3>
+                <a href="http://www.iconclass.org/rkd/25G41%28LILY%29/">symbol - Lilie</a> in <a
+                    href="">Iconclass</a>
+                <a
+                    href="http://www.getty.edu/vow/AATFullDisplay?find=shoe&amp;logic=AND&amp;note=&amp;subjectid=300046065"
+                    >object/concept – shoe</a>in <a href="">Arts and Architecture Thesaurus</a>
+                <a href="">place – Frankfurt</a> in <a href="">Thesaurus of Geographical Names </a>
+                <a href="">names</a>
+                <h3 class="substep">Interfaces</h3>
+                <blockquote>research data should be provided in a machine readable
+                    format</blockquote>
+                <blockquote class="substep">research data should be provided under an open and free
+                    licence</blockquote>
+            </div>
+            <div class="step">
+                <h2 class="red">Linked Open Data</h2>
+                <h3>Beacon</h3>
+                <div class="mfp-lightbox row">
+                    <a href="resources/img/linked_rothschild.png"><img
+                            src="resources/img/linked_rothschild.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Linked Open Data</h2><!-- A generic webservice to extract RDF statements from XML resources. -->
+                <h3>From EpiDoc – TEI XML to RDF statements (Triples) harvested with the Xtripels
+                    service</h3>
+                <div class="row">
+                    <div class="twelve columns" style="position: relative; top: -35px;">
+                        <svg style="position: relative; z-index: 1; margin-bottom: -50px;"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns="http://www.w3.org/2000/svg" width="100%" height="237pt"
+                            viewBox="0.00 0.00 1232.00 237.00">
+                            <g id="graph0" class="graph"
+                                transform="scale(1 1) rotate(0) translate(4 233)">
+                                <title>d1e255</title>
+                                <polygon style="fill:white;stroke:white;"
+                                    points="-4,4 -4,-233 1228,-233 1228,4 -4,4"/>
+                                <!-- A1 -->
+                                <g id="node1" class="node">
+                                    <title>A1</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="938,-116 854,-116 854,-82 938,-82 938,-116"/>
+                                    <text text-anchor="middle" x="896" y="-103"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E55_Type:</text>
+                                    <text text-anchor="middle" x="896" y="-90"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-- &quot;Mann&quot; -->
+                                <g id="node3" class="node">
+                                    <title>"Mann"</title>
+                                    <text text-anchor="middle" x="1150" y="-127.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >"Mann"</text>
+                                </g>
+                                <!-- A1&#45;&gt;&quot;Mann&quot; -->
+                                <g id="edge2" class="edge">
+                                    <title>A1-&gt;"Mann"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M939,-104C987,-110 1066,-120 1113,-126"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="1112.7,-129.488 1123,-127 1113.4,-122.522 1112.7,-129.488"/>
+                                    <text text-anchor="middle" x="1023" y="-121.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                                <!-- A3 -->
+                                <g id="node4" class="node">
+                                    <title>A3</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="593,-200 497,-200 497,-166 593,-166 593,-200"/>
+                                    <text text-anchor="middle" x="545" y="-187"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E21_Person:</text>
+                                    <text text-anchor="middle" x="545" y="-174"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-- A4 -->
+                                <g id="node6" class="node">
+                                    <title>A4</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="938,-172 854,-172 854,-138 938,-138 938,-172"/>
+                                    <text text-anchor="middle" x="896" y="-159"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E55_Type:</text>
+                                    <text text-anchor="middle" x="896" y="-146"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-- A3&#45;&gt;A4 -->
+                                <g id="edge4" class="edge">
+                                    <title>A3-&gt;A4</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M594,-177C623,-173 660,-169 693,-166 745,-161 803,-158 843,-157"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="843.398,-160.478 853,-156 842.701,-153.512 843.398,-160.478"/>
+                                    <text text-anchor="middle" x="752" y="-169.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P2_has_type</text>
+                                </g>
+                                <!-- A5 -->
+                                <g id="node8" class="node">
+                                    <title>A5</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="970,-228 822,-228 822,-194 970,-194 970,-228"/>
+                                    <text text-anchor="middle" x="896" y="-215"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E82_Actor_Appellation:</text>
+                                    <text text-anchor="middle" x="896" y="-202"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-- A3&#45;&gt;A5 -->
+                                <g id="edge6" class="edge">
+                                    <title>A3-&gt;A5</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M594,-187C650,-192 743,-199 812,-204"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="811.701,-207.488 822,-205 812.398,-200.522 811.701,-207.488"/>
+                                    <text text-anchor="middle" x="752" y="-205.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P131_is_identified_by</text>
+                                </g>
+                                <!-- A4&#45;&gt;&quot;Mann&quot; -->
+                                <g id="edge22" class="edge">
+                                    <title>A4-&gt;"Mann"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M939,-151C987,-146 1066,-138 1113,-134"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="1113.4,-137.478 1123,-133 1112.7,-130.512 1113.4,-137.478"/>
+                                    <text text-anchor="middle" x="1023" y="-149.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                                <!-- &quot;Jehuda&quot; -->
+                                <g id="node19" class="node">
+                                    <title>"Jehuda"</title>
+                                    <text text-anchor="middle" x="1150" y="-208.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >"Jehuda"</text>
+                                </g>
+                                <!-- A5&#45;&gt;&quot;Jehuda&quot; -->
+                                <g id="edge16" class="edge">
+                                    <title>A5-&gt;"Jehuda"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M970,-211C1017,-211 1074,-211 1112,-211"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="1112,-214.5 1122,-211 1112,-207.5 1112,-214.5"/>
+                                    <text text-anchor="middle" x="1023" y="-214.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                                <!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13 -->
+                                <g id="node9" class="node">
+                                    <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13</title>
+                                    <a
+                                        xlink:href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13"
+                                        xlink:title="crm:E19_Physical_Object:\nhttp://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
+                                        <polygon style="fill:none;stroke:black;"
+                                            points="289,-143 1,-143 1,-109 289,-109 289,-143"/>
+                                        <text text-anchor="middle" x="145" y="-130"
+                                            style="font-family:Times New Roman;font-size:10.00px;fill:blue;"
+                                            >crm:E19_Physical_Object:</text>
+                                        <text text-anchor="middle" x="145" y="-117"
+                                            style="font-family:Times New Roman;font-size:10.00px;fill:blue;"
+                                            >http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13</text>
+                                    </a>
+                                </g>
+                                <!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13&#45;&gt;A3 -->
+                                <g id="edge12" class="edge">
+                                    <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-&gt;A3</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M264,-143C338,-153 428,-166 486,-175"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="485.701,-178.488 496,-176 486.398,-171.522 485.701,-178.488"/>
+                                    <text text-anchor="middle" x="349" y="-163.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P131i_identifies</text>
+                                </g>
+                                <!-- &quot;Breite, hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das ver [...]&quot; -->
+                                <g id="node11" class="node">
+                                    <title>"Breite, hochrechteckige Sandsteinstele mit
+                                        geradem\nAbschluss. Das ver [...]"</title>
+                                    <text text-anchor="middle" x="545" y="-130"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >"Breite, hochrechteckige Sandsteinstele mit geradem</text>
+                                    <text text-anchor="middle" x="545" y="-117"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >Abschluss. Das ver [...]"</text>
+                                </g>
+                                <!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13&#45;&gt;&quot;Breite, hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das ver [...]&quot; -->
+                                <g id="edge8" class="edge">
+                                    <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-&gt;"Breite,
+                                        hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das
+                                        ver [...]"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M290,-126C325,-126 363,-126 398,-126"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="398,-129.5 408,-126 398,-122.5 398,-129.5"/>
+                                    <text text-anchor="middle" x="349" y="-129.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                                <!-- A0 -->
+                                <g id="node13" class="node">
+                                    <title>A0</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="593,-86 497,-86 497,-52 593,-52 593,-86"/>
+                                    <text text-anchor="middle" x="545" y="-73"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E21_Person:</text>
+                                    <text text-anchor="middle" x="545" y="-60"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13&#45;&gt;A0 -->
+                                <g id="edge10" class="edge">
+                                    <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-&gt;A0</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M264,-109C338,-99 428,-86 486,-77"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="486.398,-80.4778 496,-76 485.701,-73.5125 486.398,-80.4778"/>
+                                    <text text-anchor="middle" x="349" y="-104.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P131i_identifies</text>
+                                </g>
+                                <!-- A0&#45;&gt;A1 -->
+                                <g id="edge18" class="edge">
+                                    <title>A0-&gt;A1</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M594,-73C659,-79 775,-89 843,-94"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="842.701,-97.4875 853,-95 843.398,-90.5222 842.701,-97.4875"/>
+                                    <text text-anchor="middle" x="752" y="-93.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P2_has_type</text>
+                                </g>
+                                <!-- A2 -->
+                                <g id="node15" class="node">
+                                    <title>A2</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="970,-60 822,-60 822,-26 970,-26 970,-60"/>
+                                    <text text-anchor="middle" x="896" y="-47"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E82_Actor_Appellation:</text>
+                                    <text text-anchor="middle" x="896" y="-34"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-- A0&#45;&gt;A2 -->
+                                <g id="edge20" class="edge">
+                                    <title>A0-&gt;A2</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M594,-62C622,-58 660,-54 693,-51 732,-47 775,-45 812,-44"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="812,-47.5001 822,-44 812,-40.5001 812,-47.5001"/>
+                                    <text text-anchor="middle" x="752" y="-54.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P131_is_identified_by</text>
+                                </g>
+                                <!-- &quot;Elieser ben Josef Hakohen&quot; -->
+                                <g id="node17" class="node">
+                                    <title>"Elieser ben Josef Hakohen"</title>
+                                    <text text-anchor="middle" x="1150" y="-40.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >"Elieser ben Josef Hakohen"</text>
+                                </g>
+                                <!-- A2&#45;&gt;&quot;Elieser ben Josef Hakohen&quot; -->
+                                <g id="edge14" class="edge">
+                                    <title>A2-&gt;"Elieser ben Josef Hakohen"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M970,-43C1000,-43 1035,-43 1066,-43"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="1066,-46.5001 1076,-43 1066,-39.5001 1066,-46.5001"/>
+                                    <text text-anchor="middle" x="1023" y="-46.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                            </g>
+                        </svg>
+                        <h5>
+                            <strong>demo:</strong>
+                            <a href="http://xtriples.spatialhumanities.de"
+                                title="Go to XTriples Website"> http://xtriples.spatialhumanities.de </a>
+                            <br />
+                            <strong>code: </strong>
+                            <a href="https://github.com/spatialhumanities/xtriples"
+                                >https://github.com/spatialhumanities/xtriples</a>
+                            <br /><strong>presentation</strong>: <a
+                                href="https://orcid.org/0000-0002-0953-2818">Torsten Schrade</a>
+                            (Digitale Akademie Mainz):<br /><a
+                                href="https://digicademy.github.io/dariah-workshop2016-xtriples-cidoc/#/step-1"
+                                >CIDOC-CRM Modellierung epigraphischer Fachdaten mit dem XTriples
+                                Webservice - Werkstattbericht aus dem DARIAH UseCase 6.1
+                                (Steinheim-Institut &amp; ADWLM)</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <!-- table 
+            <div class="step">
+                <div>
+                    <table class="small">
+                        <thead>
+                            <tr>
+                                <th>object</th>
+                                <th>name</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="resources/img/shoe_ffb-1584.png" style="width:5rem"
+                                     /></td>
+                                <td>Schuh</td>
+                                <td>Hauszeichen</td>
+                            </tr>
+                            <tr>
+                                <td><img src="resources/img/shoe_ffb-1678.png" style="width:5rem"
+                                     /></td>
+                                <td>Schuh</td>
+                                <td>Hauszeichen</td>
+                            </tr>
+                            <tr>
+                                <td><img src="resources/img/shoe_ffb-2057.png" style="width:5rem"
+                                     /></td>
+                                <td>Schuh</td>
+                                <td>Hauszeichen</td>
+                            </tr>
+                            <tr>
+                                <td><img src="resources/img/shoe_ffb-444.png" style="width:5rem"
+                                     /></td>
+                                <td>Schuh</td>
+                                <td>Hauszeichen</td>
+                            </tr>
+                            <tr>
+                                <td><img src="resources/img/shoe_ffb-52.png" style="width:5rem"
+                                     /></td>
+                                <td>Schuh</td>
+                                <td>Hauszeichen</td>
+                            </tr>
+                            <tr>
+                                <td><img src="resources/img/shoe_ffb-55.png" style="width:20%"
+                                     /></td>
+                                <td>Schuh</td>
+                                <td>Hauszeichen</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            -->
+            <div class="step">
+                <h2>Text</h2>
+                <h3 class="red up-25 after-25">Standard text styles</h3>
+                <p class="justify"> To die or fly to <span class="dotted">dream</span>: ay, <em>that
+                        makes calamity of office</em>, and to be: to dread of, and the
+                        heart-ache<sup>1</sup> and sweat pith their <span class="outline"
+                        >currents</span> turns, puzzles <code>the pale cast of outrageous</code> for
+                    who would bear, <strong>to be or to sleep</strong> of <del>death</del>
+                    <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and
+                        arrows</span> of dispriz'd lose ills we have shuffled o'er with a <span
+                        class="highlight">bare</span> bourn no <a
+                        href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>.
+                        <cite>W.S., Volume<sub>2</sub></cite>
+                </p>
+                <blockquote> Beware the Jabberwock, my son! The jaws that bite, the claws that
+                    catch! Beware the Jubjub bird, and shun The frumious Bandersnatch! </blockquote>
+            </div>
+            <div class="step">
+                <h2>Text</h2>
+                <h3 class="red up-25 after-25">Text classes (medium, small, x-small)</h3>
+                <h4><strong>medium</strong></h4>
+                <p class="medium up-25"> To die or fly to <span class="dotted">dream</span>: ay,
+                        <em>that makes calamity of office</em>, and to be: to dread of, and the
+                        heart-ache<sup>1</sup> and sweat pith their <span class="outline"
+                        >currents</span> turns, puzzles <code>the pale cast of outrageous</code> for
+                    who would bear, <strong>to be or to sleep</strong> of <del>death</del>
+                    <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and
+                        arrows</span> of dispriz'd lose ills we have shuffled o'er with a <span
+                        class="highlight">bare</span> bourn no <a
+                        href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>.
+                        <cite>W.S., Volume<sub>2</sub></cite>
+                </p>
+                <h5><strong>small</strong></h5>
+                <p class="small up-25"> To die or fly to <span class="dotted">dream</span>: ay,
+                        <em>that makes calamity of office</em>, and to be: to dread of, and the
+                        heart-ache<sup>1</sup> and sweat pith their <span class="outline"
+                        >currents</span> turns, puzzles <code>the pale cast of outrageous</code> for
+                    who would bear, <strong>to be or to sleep</strong> of <del>death</del>
+                    <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and
+                        arrows</span> of dispriz'd lose ills we have shuffled o'er with a <span
+                        class="highlight">bare</span> bourn no <a
+                        href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>.
+                        <cite>W.S., Volume<sub>2</sub></cite>
+                </p>
+                <h6><strong>x-small</strong></h6>
+                <p class="x-small up-25"> To die or fly to <span class="dotted">dream</span>: ay,
+                        <em>that makes calamity of office</em>, and to be: to dread of, and the
+                        heart-ache<sup>1</sup> and sweat pith their <span class="outline"
+                        >currents</span> turns, puzzles <code>the pale cast of outrageous</code> for
+                    who would bear, <strong>to be or to sleep</strong> of <del>death</del>
+                    <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and
+                        arrows</span> of dispriz'd lose ills we have shuffled o'er with a <span
+                        class="highlight">bare</span> bourn no <a
+                        href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>.
+                        <cite>W.S., Volume<sub>2</sub></cite>
+                </p>
+            </div>
+            <div class="step">
+                <h2>Lists, Lists, Lists</h2>
+                <h3 class="red up-25 after-25">Definition, unordered, ordered</h3>
+                <div class="row">
+                    <div class="four columns">
+                        <dl>
+                            <dt> Acceleration </dt>
+                            <dd> A constant force, acting on a particle of mass m, will produce a
+                                constant acceleration a </dd>
+                            <dt> Energy </dt>
+                            <dd> If we represent kinetic energy by the symbol K, then K = ½ m v²
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="four columns">
+                        <h3>Medium</h3>
+                        <ul>
+                            <li>One</li>
+                            <li>Two <ul>
+                                    <li>Two.One</li>
+                                    <li>Two.Two</li>
+                                </ul>
+                            </li>
+                            <li>Three</li>
+                        </ul>
+                        <h4>Small</h4>
+                        <ul class="small">
+                            <li>One</li>
+                            <li>Two <ul>
+                                    <li>Two.One</li>
+                                    <li>Two.Two</li>
+                                </ul>
+                            </li>
+                            <li>Three</li>
+                        </ul>
+                    </div>
+                    <div class="four columns">
+                        <h3>Medium</h3>
+                        <ol>
+                            <li>One</li>
+                            <li>Two <ol>
+                                    <li>Two.One</li>
+                                    <li>Two.Two</li>
+                                </ol>
+                            </li>
+                            <li>Thre</li>
+                        </ol>
+                        <h4>Small</h4>
+                        <ol class="small">
+                            <li>One</li>
+                            <li>Two <ol>
+                                    <li>Two.One</li>
+                                    <li>Two.Two</li>
+                                </ol>
+                            </li>
+                            <li>Thre</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2>Tables</h2>
+                <h3 class="red up-25 after-50">Table styles</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>One</th>
+                            <th>Two</th>
+                            <th>Three</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Four</td>
+                            <td>Five</td>
+                            <td>Six</td>
+                        </tr>
+                        <tr>
+                            <td>Seven</td>
+                            <td>Eight</td>
+                            <td>Nine</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="step">
+                <h1 class="red">02</h1>
+                <h2 class="line-height-one-five"> Advanced </h2>
+            </div>
+            <div class="step">
+                <h2>Slide structure</h2>
+                <h3 class="red up-25 after-50">Twelfe column grid with skeleton.css</h3>
+                <div class="example-grid">
+                    <div class="row">
+                        <div class="one column">One</div>
+                        <div class="eleven columns">Eleven</div>
+                    </div>
+                    <div class="row">
+                        <div class="two columns">Two</div>
+                        <div class="ten columns">Ten</div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns">Three</div>
+                        <div class="nine columns">Nine</div>
+                    </div>
+                    <div class="row">
+                        <div class="four columns">Four</div>
+                        <div class="eight columns">Eight</div>
+                    </div>
+                    <div class="row">
+                        <div class="five columns">Five</div>
+                        <div class="seven columns">Seven</div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns">Six</div>
+                        <div class="six columns">Six</div>
+                    </div>
+                    <div class="row">
+                        <div class="seven columns">Seven</div>
+                        <div class="five columns">Five</div>
+                    </div>
+                    <div class="row">
+                        <div class="eight columns">Eight</div>
+                        <div class="four  columns">Four</div>
+                    </div>
+                    <div class="row">
+                        <div class="nine columns">Nine</div>
+                        <div class="three columns">Three</div>
+                    </div>
+                    <div class="row">
+                        <div class="ten columns">Ten</div>
+                        <div class="two columns">Two</div>
+                    </div>
+                    <div class="row">
+                        <div class="eleven columns">Eleven</div>
+                        <div class="one column">One</div>
+                    </div>
+                </div>
+                <p class="down-25"> Website: <a href="http://getskeleton.com/"
+                        >http://getskeleton.com/</a>
+                </p>
+            </div>
+            <div class="step">
+                <h2>Substeps</h2>
+                <h3 class="red up-25 after-50">Triggered with class "substep"</h3>
+                <ul class="line-height-one-five">
+                    <li class="substep">One</li>
+                    <li class="substep">Two</li>
+                    <li class="substep">Three</li>
+                    <li class="substep">Four</li>
+                    <li class="substep">Five</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h2>Responsive images</h2>
+                <h3 class="red up-25 after-50">With magnific popup</h3>
+                <div class="mfp-lightbox row">
+                    <div class="three columns">
+                        <a href="resources/img/1024x768.png">
+                            <img src="resources/img/1024x768.png" />
+                        </a>
+                    </div>
+                    <div class="four columns">
+                        <a href="resources/img/1024x768.png">
+                            <img src="resources/img/1024x768.png" />
+                        </a>
+                    </div>
+                    <div class="five columns">
+                        <a href="resources/img/1024x768.png">
+                            <img src="resources/img/1024x768.png" />
+                        </a>
+                    </div>
+                </div>
+                <p class="down-50"> Website: <a href="http://dimsemenov.com/plugins/magnific-popup/"
+                        >http://dimsemenov.com/plugins/magnific-popup/</a>
+                </p>
+            </div>
+            <div class="step">
+                <h2>Code listings</h2>
+                <h3 class="red up-25 after-50">With highlight.js (support for most languages)</h3>
+                <pre>
+<code class="linenumbers js">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i &lt; classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
+
+export  $initHighlight;
+</code>
+</pre>
+                <p> Website: <a href="https://highlightjs.org/">https://highlightjs.org/</a>
+                </p>
+            </div>
+            <div class="step">
+                <h2>Alternative code listing</h2>
+                <h3 class="red up-25 after-25">With Codemirror (support for even more
+                    languages)</h3>
+                <form><textarea id="sparql" name="sparql"> PREFIX rel:
+                        &lt;http://purl.org/vocab/relationship/&gt; PREFIX rdfs:
+                        &lt;http://www.w3.org/2000/01/rdf-schema#&gt; PREFIX foaf:
+                        &lt;http://xmlns.com/foaf/0.1/&gt; PREFIX rdf:
+                        &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; SELECT DISTINCT ?subject
+                        ?subjectLabel ?object ?objectLabel ?predicate WHERE { ?subject ?predicate
+                        ?object . ?subject (rel:parentOf|^rel:parentOf|rel:spouseOf) ?object .
+                        ?subject rdfs:label ?subjectLabel . ?object rdfs:label ?objectLabel .
+                        ?subject foaf:gender ?subjectGender . ?object foaf:gender ?objectGender .
+                        BIND (IF(?subjectGender = "male"@en, "gold", "yellowgreen") AS ?sourceColor)
+                        BIND (IF(?objectGender = "male"@en, "gold", "yellowgreen") AS ?targetColor)
+                        } </textarea></form>
+                <p> Website: <a href="https://codemirror.net/">https://codemirror.net/</a>
+                </p>
+            </div>
+            <div class="step">
+                <h2>Charts</h2>
+                <h3 class="red up-25 after-50">With chartist.js</h3>
+                <div class="ct-container">
+                    <div class="ct-chart ct-major-twelfth project-count"></div>
+                </div>
+                <p class="down-25"> Website: <a href="https://gionkunz.github.io/chartist-js/"
+                        >https://gionkunz.github.io/chartist-js/</a>
+                </p>
+            </div>
+            <div class="step">
+                <h2>Graph models</h2>
+                <h3 class="red up-25 after-25">With greuler.js</h3>
+                <div id="greuler"></div>
+                <script>
+                'use strict';
+                greuler({
+                  target: '#greuler',
+                  width: 480,
+                  height: 300,
+                  data: greuler.Graph.random({
+                    order: 5,
+                    size: 5,
+                    connected: true
+                  })
+                }).update()
+            </script>
+                <p class="down-75"> Website: <a href="https://maurizzzio.github.io/greuler/#/"
+                        >https://maurizzzio.github.io/greuler/#/</a>
+                </p>
+            </div>
+            <div class="step">
+                <div class="centered">
+                    <h1>F I N I S</h1>
+                    <h2>Thank you</h2>
+                </div>
+            </div>
+            <div class="step">
+                <h2>Literature &amp; Software</h2>
+                <h4>Literature</h4>
+                <ul class="small">
+                    <li> One </li>
+                    <li> Two </li>
+                    <li> Three </li>
+                </ul>
+                <h4>Software</h4>
+                <ul class="small">
+                    <li> One </li>
+                    <li> Two </li>
+                    <li> Three </li>
+                </ul>
+                <h4>Download</h4>
+                <ul class="small">
+                    <li>
+                        <a href="https://kollatzthomas.github.io/2017_Leeds/"> Link to presentation
+                        </a>
+                    </li>
+                    <li> License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY
+                            4.0</a>, Thomas Kollatz </li>
+                </ul>
+            </div>
+        </div>
+        <!-- jquery -->
+        <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+        <!-- chartist -->
+        <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+        <script src="resources/js/chartist.charts.js"></script>
+        <!-- codemirror -->
+        <script src="vendor/codemirror/lib/codemirror.js"></script>
+        <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+        <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+        <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+        <!-- highlight -->
+        <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="resources/js/hljs.linenumbering.js"></script>
+        <!-- magnific popup -->
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+        <script src="resources/js/magnific-popup.lightbox.js"></script>
+        <!-- impress.mod.js -->
+        <script src="vendor/impress/impress.fork.js"></script>
+        <script src="vendor/impress/impress-slidenum.js"></script>
+        <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+    </body>
+</html>
