@@ -68,7 +68,7 @@
                         >IMC Leeds</a></h4>
                 <h4><strong>session 1104: Digital Approaches to Jewish History in Medieval Germany
                     </strong></h4>
-                <h1 class="down-100">Epidat</h1>
+                <h1 class="down-100">epidat</h1>
                 <h2 class="red up-25">Database of Jewish Epigraphy</h2>
                 <h4 class="down-100">
                     <strong>Data: </strong><a href="https://github.com/KollatzThomas/2017_Leeds_IMC"
@@ -350,19 +350,58 @@
             <div class="step">
                 <h2 class="red">solutions</h2>
                 <h3><span class="red">☞</span> Provide your data in standard formats and make them
-                    available through an Interface</h3>
+                    available via an interface</h3>
                 <ul class="line-height-one-five">
-                    <li>Epidat data are encoded for <span class="dotted">readers</span> in <code>html</code>, which
-                        provides structuring the research data by the means of
-                        webdesign, typography and structure.</li>
+                    <li>epidat data are encoded in <code>html</code>, a format for <span class="dotted">readers</span>, which
+                        provides our epigraphical research data by the means of
+                        webdesign, typography in a structured form</li>
                     <li>epidat data are also provided for
-                        <span class="dotted">users</span> in a machine readable format <code>EpiDoc: TEI XML for epigraphic Documents</code>,
-                        which is widely used among (digital) epigraphers</li>
-                </ul><blockquote>research data should be provided <ul>
+                        <span class="dotted">users</span> in <code>EpiDoc: TEI XML for Epigraphic Documents</code>, which provides research data in a machine readable, structured data format, which is 
+                        widely used by (digital) epigraphers</li>
+                </ul><blockquote><span class="red">☞</span> research data should be provided <ul>
                         <li>in a <em>machine readable</em> format</li>
                         <li>in a <em>system independent</em> format</li>
                         <li>in a <em>program independent</em> documented standard format</li>
-                    </ul> through interfaces. </blockquote>
+                    <li>via <em>interfaces</em></li></ul></blockquote>
+            </div>
+            <div class="step">
+                <h2 class="red">TEI XML </h2>
+                <dl>
+                    <dt>TEI</dt>
+                    <dd>Text Encoding Initiative</dd>
+                </dl>
+                <blockquote>The Text Encoding Initiative (TEI) is a consortium which
+                    collectively develops and maintains a standard for the representation of
+                    texts in digital form. Its chief deliverable is a set of Guidelines which
+                    specify encoding methods for machine-readable texts …</blockquote>
+                <p class="right">see: <a href="http://www.tei-c.org"
+                    >http://www.tei-c.org</a></p>
+            </div>
+            <div class="step">
+                <h1 class="red">EpiDoc</h1>
+                <h4>Epigraphic Documents in TEI XML | text markup for ancient documents</h4>
+                <blockquote>EpiDoc is an international, collaborative effort that provides
+                    guidelines and tools for encoding scholarly and educational editions of
+                    ancient documents. It uses a subset of the Text Encoding Initiative's
+                    standard for the representation of texts in digital form and was developed
+                    initially for the publication of digital editions of ancient inscriptions</blockquote>
+                <h4>example</h4>
+                <pre><code class="linenumbers js">&lt;profileDesc&gt;
+ &lt;particDesc&gt;
+    &lt;listPerson&gt;
+        &lt;person xml:id="ffb-80-1" sex="1"&gt;
+            &lt;persName ref="http://d-nb.info/gnd/11879132X"&gt;
+             Meir Rothschild ben Anschel Rothschild
+            &lt;/persName&gt;
+            &lt;death when="1812-09-19"/&gt; 
+        &lt;/person&gt;
+    &lt;/listPerson&gt;
+ &lt;/particDesc&gt;
+ &lt;langUsage&gt;
+    &lt;language ident="he" usage="100"&gt;Hebrew&lt;/language&gt;
+ &lt;/langUsage&gt;
+ &lt;/profileDesc&gt;
+</code></pre>
             </div>
             <div class="step">
                 <h2 class="red">solutions</h2>
@@ -393,7 +432,7 @@
                                     src="resources/img/linked_rothschild.png" />
                             </a>
                         </div>
-                        <div><p class="small"><a
+                        <div><p class="x-small"><a
                                     href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-80-1"
                                     >http://steinheim-institut.de/cgi-bin/epidat?id=ffb-80-1</a><br/><a href="http://steinheim-institut.de/daten/beacon.txt">http://steinheim-institut.de/daten/beacon.txt</a></p>
                         </div></div>
