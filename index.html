@@ -120,7 +120,7 @@
                 <h2 class="red">History and Scope</h2>
                 <div class="row">
                     <div class="six columns">
-                        <ul>
+                        <ul class="line-height-one-five">
                             <li>developed since 2002</li>
                             <li>online since 2006</li>
                             <li>driven by projects</li>
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                     <div class="six columns">
-                        <ul>
+                        <ul class="line-height-one-five">
                             <li><span class="dotted">180</span> digital editions of historic Jewish
                                 cemeteries</li>
                             <li><span class="dotted">33.000 inscriptions</span></li>
@@ -156,6 +156,9 @@
                             <li>Lithuania [3]</li>
                             <li>Czechia [5]</li>
                         </ul>
+                        <p class="x-small"><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?info=map&amp;lang=en"
+                                >http://www.steinheim-institut.de/cgi-bin/epidat?info=map</a></p>
                     </div>
                 </div>
             </div>
@@ -190,19 +193,23 @@
                 </div>
             </div>
             <div class="step">
-                <h2 class="red">epigraphical database</h2>
-                <div class="mfp-lightbox row">
-                    <div class="six columns">
-                        <p><a href="resources/img/speyer.png"><img src="resources/img/speyer.png"
-                                 /></a></p>
-                    </div>
-                    <div class="six columns"><h3> Languages</h3><ul>
-                            <li>Hebrew</li>
-                            <li>German in Hebrew letters (1790<abbr>ff</abbr>)</li>
-                            <li>German (19<sup>th</sup> century)</li>
-                        </ul>
-                    </div>
-                </div></div>
+                <h2 class="red">Languages</h2>
+                <div>
+                    <div class="row">
+                        <div class="mfp-lightbox six columns">
+                            <p><a href="resources/img/speyer.png"><img
+                                        src="resources/img/speyer.png" /></a></p>
+                        </div>
+                        <div class="six columns"><ul>
+                                <li>Hebrew</li>
+                                <li>German in Hebrew letters (1790<abbr>ff</abbr>)</li>
+                                <li>German (19<sup>th</sup> century)</li>
+                            </ul>
+                            <p class="x-small">example: <br /><a
+                                    href="http://steinheim-institut.de/cgi-bin/epidat?id=spy-6&amp;lang=en"
+                                    >http://steinheim-institut.de/cgi-bin/epidat?id=spy-6</a></p>
+                        </div>
+                    </div></div></div>
             <div class="step">
                 <div class="row">
                     <div class="mfp-lightbox six columns">
@@ -358,8 +365,9 @@
             </div>
             <div class="step">
                 <h2 class="red">step 2: interoperability</h2>
-                <h3><span class="red">☞ </span> provide your data according to a <span class="dotted">standard
-                    format</span><br/><span class="red">☞ </span> make them available via an <span class="dotted">interface</span></h3>
+                <h3><span class="red">☞ </span> provide your data according to a <span
+                        class="dotted">standard format</span><br /><span class="red">☞ </span> make
+                    them available via an <span class="dotted">interface</span></h3>
                 <ul class="line-height-one-five">
                     <li>epidat data are encoded in <code>html</code> a format for <span
                             class="dotted">readers</span>, which provides our epigraphical research
@@ -368,30 +376,33 @@
                             <code>EpiDoc: TEI XML for Epigraphic Documents</code>, which provides
                         research data in a machine readable, structured data format, which is widely
                         used by (digital) epigraphers</li>
-                </ul><blockquote><span class="red">☞</span> rule: research data should be provided <ul>
+                </ul>
+                </div>
+            <div class="step"><h2 class="red">☞  rule</h2>
+                <blockquote>research data should be provided <ul>
                         <li>in a <em>machine readable</em> format</li>
-                        <li>in a <em>system independent</em> format</li>
-                        <li>in a <em>program independent</em> documented standard format</li>
+                        <li>in a <em>system-independent</em> format</li>
+                        <li>in a <em>program-independent</em> documented standard format</li>
                         <li>via <em>interfaces</em></li>
                     </ul></blockquote>
             </div>
             <div class="step">
                 <h2 class="red">TEI XML </h2>
-                <blockquote class="medium">The Text Encoding Initiative (TEI) is a consortium which collectively
-                    develops and maintains a standard for the representation of texts in digital
-                    form. Its chief deliverable is a set of Guidelines which specify encoding
-                    methods for machine-readable texts …</blockquote>
+                <blockquote class="medium">The Text Encoding Initiative (TEI) is a consortium which
+                    collectively develops and maintains a standard for the representation of texts
+                    in digital form. Its chief deliverable is a set of Guidelines which specify
+                    encoding methods for machine-readable texts …</blockquote>
                 <p class="right">see: <a href="http://www.tei-c.org">http://www.tei-c.org</a></p>
             </div>
             <div class="step">
-                <h2 class="red">EpiDoc</h2>
-                <h4>Epigraphic Documents in TEI XML | text markup for ancient documents</h4>
-                <blockquote class="medium">EpiDoc is an international, collaborative effort that provides
-                    guidelines and tools for encoding scholarly and educational editions of ancient
-                    documents. It uses a subset of the Text Encoding Initiative's standard for the
-                    representation of texts in digital form and was developed initially for the
-                    publication of digital editions of ancient inscriptions</blockquote>
-                <h4 class="down-50">example</h4>
+                <h2 class="red">
+                Epigraphic Documents in TEI XML
+                </h2><blockquote class="medium"><code>EpiDoc</code> is an international, collaborative effort that
+                    provides guidelines and tools for encoding scholarly and educational editions of
+                    ancient documents. It uses a subset of the Text Encoding Initiative's standard
+                    for the representation of texts in digital form and was developed initially for
+                    the publication of digital editions of ancient inscriptions</blockquote>
+                
                 <pre><code class="linenumbers js">&lt;!-- person --&gt;
 &lt;profileDesc&gt;
  &lt;particDesc&gt;
@@ -434,12 +445,12 @@
                                 ><em>Frankfurt</em> on the Main</a> is identified in the <a href=""
                             >Thesaurus of Geographic Names </a> and by this distinguished from two
                         other German towns named Frankfurt </li>
-                    <li><a href="">names of persons</a> have unique identifiers in the GND-database
+                    <li><a href="http://d-nb.info/gnd/11879132X">names of persons</a> have unique identifiers in the GND-database
                         of the German National Library and other National Library catalogues</li>
                 </ul>
             </div>
             <div class="step">
-                <h2 class="red">Linked Open Data</h2>
+                <h2 class="red">Linked Open Data – simple</h2>
                 <div class="row">
                     <div class="six columns">
                         <div class="mfp-lightbox ">
@@ -456,11 +467,12 @@
                     <div class="six columns">
                         <h3>Beacon</h3>
                         <div>
-                            <p class="line-height-one-five"> Only by providing the
+                            <p class="line-height-one-five small"> Only by providing the
                                 GND-Identification-number more information about the person in
                                 question is on the fly dynamically provided by automatically
-                                harvesting other online databases based on the GND-ID <code>11879132X</code></p>
-                            <ul class="line-height-one-five">
+                                harvesting other online databases based on the GND-ID
+                                    <code>11879132X</code></p>
+                            <ul class="line-height-one-five small">
                                 <li>easy</li>
                                 <li>effective</li>
                             </ul>
@@ -470,9 +482,13 @@
                     </div></div>
             </div>
             <div class="step">
-                <h2 class="red">Linked Open Data</h2><!-- A generic webservice to extract RDF statements from XML resources. -->
-                <h3>From EpiDoc – TEI XML to RDF statements (Triples) harvested with the Xtripels
-                    service</h3>
+                <h2 class="red">Linked Open Data – advanced</h2><!-- A generic webservice to extract RDF statements from XML resources. -->
+                <ul>
+                    <li>From <code>EpiDoc – TEI XML</code>
+                    </li>
+                    <li>via <code>xTripels webservice</code></li>
+                    <li>to semantic RDF statements (<code>Triples</code>)</li>
+                </ul>
                 <div class="row">
                     <div class="twelve columns" style="position: relative; top: -35px;">
                         <svg style="position: relative; z-index: 1; margin-bottom: -50px;"
@@ -814,7 +830,7 @@
             </div>
             <div class="step">
                 <div class="centered">
-                    <h1>F I N I S</h1>
+                    <h1 class="red">F I N I S</h1>
                     <h2>Thank you</h2>
                 </div>
             </div>
